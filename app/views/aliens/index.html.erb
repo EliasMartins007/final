@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<div class= "d-flex alignítems-center justify-content-center">
+<h1>Cadastro de Aliens</h1>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aliens.each do |alien| %>
+      <tr>
+        <td><%= alien.name %></td>
+        <td><%= alien.age %></td>
+        <td><%= link_to 'Show', alien %></td>
+        <td><%= link_to 'Edit', edit_alien_path(alien) %></td>
+        <td><%= link_to 'Destroy', alien, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alien', new_alien_path %>
