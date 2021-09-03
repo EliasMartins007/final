@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   #GET/about
   get "about", to: "about#index"
   #get "aliens", to: "aliens#index"
+  get "sign_up", to: "registrations#new"
+  post "sign_up", to: "registrtions#create"
+  #
   root to: "main#index"
+ 
 end
 
   #
