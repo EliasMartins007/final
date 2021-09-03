@@ -1,7 +1,21 @@
 <h1>Sign UP</h1>
 
 <%= form_with model: @user, url: sign_up_path do |form| %>
-   <%= form.text_field :email %>
-   <%= form.password_field :password %>
-   <%= form.password_field :password_confirmation %>
+<div class="mb-3">
+   <%= form.label :email%>
+   <%= form.text_field :email, class: "form-control", placeholder: "teste@teste.com" %>
+</div>
+<div class="mb-3">
+   <%= form.label :password%> 
+   <%= form.password_field :password, class: "form-control", placeholder: "password" %>
+</div>
+<div class="mb-3">
+   <%= form.label :password_confirmação%>
+   <%= form.password_field :password_confirmation, class: "form-control", placeholder: "password" %>
+</div>
+
+<div class="mb-3">
+  <%= form.submit %>  
+</div>
  <% end %>
+ 
