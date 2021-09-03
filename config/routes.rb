@@ -2,11 +2,10 @@ Rails.application.routes.draw do
   resources :posts
   #GET/about
   get "about", to: "about#index"
-
-  get "/", to: "main#index"
-
+  #get "aliens", to: "aliens#index"
+  root to: "main#index"
+end
 
   #
   #
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-end
